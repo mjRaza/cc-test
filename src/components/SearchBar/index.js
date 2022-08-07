@@ -38,7 +38,7 @@ const SearchBar = () => {
         <DebounceField value={keyword} onUpdate={setKeyword} />
 
         {totalGist >=0 ? <div>Total Number of Gist: {totalGist}</div>:null}
-        {data && data?.length ? data.map((gist) => <Gist gist={gist} />) : null}
+        {data && data?.length ? data.map((gist,i) => <Gist key={i} gist={gist} />) : null}
 
         <Gist />
       </div>
